@@ -1,28 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <aesop-cart :cart-open="cartOpen" v-on:toggleCart="cartOpen = !cartOpen" />
+    <aesop-header v-on:toggleCart="cartOpen = !cartOpen" />
+    <aesop-pdp-header />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import AesopCart from "@/layouts/AesopCart.vue";
+import AesopHeader from "@/layouts/AesopHeader.vue";
+import AesopPdpHeader from "@/layouts/AesopPdpHeader.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    AesopCart,
+    AesopHeader,
+    AesopPdpHeader
   },
+  data() {
+    return {
+      cartOpen: false
+    };
+  }
 };
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style scoped lang="scss"></style>
