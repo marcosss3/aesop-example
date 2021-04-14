@@ -66,7 +66,7 @@ export default {
     display: flex;
 
     &-item {
-      margin-right: 2rem;
+      margin-right: 1.5rem;
       position: relative;
 
       &:last-child {

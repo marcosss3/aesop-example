@@ -47,7 +47,15 @@ export default {
 .radios {
   &__wrapper {
     display: inline;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   & input {
